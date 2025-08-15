@@ -1,0 +1,1713 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/"
+     xml:base="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:CommuteUniverse="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+        <rdfs:comment>A commute System Ontology built by Chidiebere Oscar Nnadiukwu</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#affectedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#affectedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Route"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#FailureEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasAlternative -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasAlternative">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Route"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Route"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasAppointment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasAppointment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Commuter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Appointment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#requiresAccess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#requiresAccess">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Commuter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#SpecialNeed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#servesRoute -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#servesRoute">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#TransportMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Route"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#triggersSolution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#triggersSolution">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#FailureEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Solution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#usesMode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#usesMode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Commuter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#TransportMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasBatteryLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasBatteryLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EVCar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasCapacity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bus"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasDelayDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasDelayDuration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Delay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasPrecipitation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasPrecipitation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WeatherDisruption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasStartTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasStartTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Appointment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasTemperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WeatherDisruption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Appointment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Appointment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bicycle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bicycle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#TransportMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Breakdown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Breakdown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#FailureEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#TransportMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#BusRoute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#BusRoute">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Route"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Commuter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Commuter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#CyclingPath -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#CyclingPath">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Route"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Delay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Delay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#FailureEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#DelayAppointment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#DelayAppointment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Solution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EVCar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EVCar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#TransportMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EducationalAppointment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EducationalAppointment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Appointment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#FailureEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#FailureEvent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#InsulinCooling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#InsulinCooling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#SpecialNeed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedicalAppointment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedicalAppointment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Appointment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedicalTraveller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedicalTraveller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Commuter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#OfficeWorker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#OfficeWorker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Commuter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RailRoute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RailRoute">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Route"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Reroute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Reroute">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Solution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Route -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Route"/>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RouteClosure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RouteClosure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#FailureEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Solution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Solution"/>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#SpecialNeed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#SpecialNeed"/>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Commuter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Taxi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Taxi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#TransportMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Train -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Train">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#TransportMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#TransportMode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#TransportMode"/>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VehicleSwitch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VehicleSwitch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Solution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VisualImpairment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VisualImpairment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#SpecialNeed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WeatherDisruption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WeatherDisruption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#FailureEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WheelchairAccess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WheelchairAccess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#SpecialNeed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WorkAppointment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WorkAppointment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Appointment"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bicycle_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bicycle_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bicycle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Breakdown_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Breakdown_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Breakdown"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#BusRoute_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#BusRoute_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#BusRoute"/>
+        <CommuteUniverse:affectedBy rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Delay_001"/>
+        <CommuteUniverse:hasAlternative rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#CyclingPath_001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bus_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bus_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bus"/>
+        <CommuteUniverse:servesRoute rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#BusRoute_001"/>
+        <CommuteUniverse:hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</CommuteUniverse:hasCapacity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Closure_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Closure_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RouteClosure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#CyclingPath_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#CyclingPath_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#CyclingPath"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#DelaySolution_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#DelaySolution_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#DelayAppointment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Delay_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Delay_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Delay"/>
+        <CommuteUniverse:hasDelayDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</CommuteUniverse:hasDelayDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EVCar_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EVCar_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EVCar"/>
+        <CommuteUniverse:hasBatteryLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</CommuteUniverse:hasBatteryLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EduAppointment_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EduAppointment_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EducationalAppointment"/>
+        <CommuteUniverse:hasStartTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-15T09:00:00</CommuteUniverse:hasStartTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#InsulinCooling_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#InsulinCooling_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#InsulinCooling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedAppointment_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedAppointment_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedicalAppointment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedTraveller_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedTraveller_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedicalTraveller"/>
+        <CommuteUniverse:hasAppointment rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedAppointment_001"/>
+        <CommuteUniverse:requiresAccess rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#InsulinCooling_001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#OfficeWorker_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#OfficeWorker_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#OfficeWorker"/>
+        <CommuteUniverse:usesMode rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bus_001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RailRoute_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RailRoute_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RailRoute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RerouteSolution_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RerouteSolution_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Reroute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Student_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Student_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Student"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Taxi_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Taxi_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Taxi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Train_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Train_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Train"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VehicleSwitch_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VehicleSwitch_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VehicleSwitch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VisualImpairment_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VisualImpairment_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VisualImpairment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Weather_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Weather_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WeatherDisruption"/>
+        <CommuteUniverse:triggersSolution rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RerouteSolution_001"/>
+        <CommuteUniverse:hasPrecipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</CommuteUniverse:hasPrecipitation>
+        <CommuteUniverse:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</CommuteUniverse:hasTemperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Wheelchair_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Wheelchair_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WheelchairAccess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WorkAppointment_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WorkAppointment_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WorkAppointment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Appointment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Commuter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#FailureEvent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Route"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Solution"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#SpecialNeed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#TransportMode"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bicycle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EVCar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Taxi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Train"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Breakdown"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Delay"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RouteClosure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WeatherDisruption"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#BusRoute"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#CyclingPath"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RailRoute"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Commuter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#FailureEvent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Route"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Solution"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#SpecialNeed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#TransportMode"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#DelayAppointment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Reroute"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VehicleSwitch"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EducationalAppointment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedicalAppointment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WorkAppointment"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#InsulinCooling"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VisualImpairment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WheelchairAccess"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedicalTraveller"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#OfficeWorker"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Student"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/cap">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/fe">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/wd">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/temp">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/time">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/tm">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/delay">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/dur">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sn">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/closure">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/alt">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/mt">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/ev">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/lvl">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Accessibility Constraint</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Commuter"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#requiresAccess"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sn"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WheelchairAccess"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sn"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#usesMode"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/c"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/tm"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#servesRoute"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/tm"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#affectedBy"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/closure"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#RouteClosure"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/closure"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Route"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/alt"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasAlternative"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/alt"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#CyclingPath"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/alt"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Medical Commuter</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#MedicalTraveller"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/mt"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#requiresAccess"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/mt"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sn"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#InsulinCooling"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sn"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#usesMode"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/mt"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/tm"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#servesRoute"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/tm"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#affectedBy"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/d"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Delay"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/d"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Solution"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#triggersSolution"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/d"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VehicleSwitch"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Low EV Battery</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#EVCar"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/ev"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasBatteryLevel"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/ev"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/lvl"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/lvl"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#servesRoute"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/ev"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#FailureEvent"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/fe"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Breakdown"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/fe"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#affectedBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/fe"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Weather Disruptions</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WeatherDisruption"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/wd"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasPrecipitation"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/wd"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/p"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#affectedBy"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/wd"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Solution"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#triggersSolution"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/wd"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Reroute"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Bus Delay</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Bus"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasCapacity"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/b"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/cap"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/cap"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#servesRoute"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/b"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#FailureEvent"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/fe"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Delay"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/fe"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasDelayDuration"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/fe"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#affectedBy"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/fe"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Freezing Weather</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#WeatherDisruption"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/wd"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasTemperature"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/wd"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/temp"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/temp"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#affectedBy"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/wd"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#BusRoute"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Solution"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#triggersSolution"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/wd"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#VehicleSwitch"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Taxi"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Appointment Conflict</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Commuter"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasAppointment"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasStartTime"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/a"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/time"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#usesMode"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/c"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/tm"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#servesRoute"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/tm"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#affectedBy"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/r"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/delay"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Delay"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/delay"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#hasDelayDuration"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/delay"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/dur"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                                                        <swrl:arguments>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/dur"/>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</rdf:first>
+                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </swrl:arguments>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#Solution"/>
+                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#triggersSolution"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/delay"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse#DelayAppointment"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/oscarslegion/ontologies/2025/7/CommuteUniverse/sol"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
